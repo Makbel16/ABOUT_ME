@@ -7,6 +7,9 @@ Replace the placeholder below with your deployed portfolio URL:
 
 `https://makbel-kebede.vercel.app/`
 
+## [About](https://makbel-kebede.vercel.app/)
+A modern personal portfolio built with React, Vite, and a Vercel serverless contact form.
+
 ## 🚀 Project Overview
 This repository contains a portfolio website that includes:
 
