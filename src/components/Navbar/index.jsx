@@ -12,7 +12,7 @@ const Navbar = () => {
       setScrolled(window.scrollY > 50);
       
       // Determine active section based on scroll position
-      const sections = ['home', 'about', 'projects', 'skills', 'experience', 'education', 'contact'];
+      const sections = ['home', 'about', 'projects', 'skills', 'experience', 'education', 'blog', 'contact'];
       const scrollPosition = window.scrollY + 200;
       
       for (const section of sections) {
@@ -46,6 +46,7 @@ const Navbar = () => {
     { id: 'skills', label: 'Skills' },
     { id: 'experience', label: 'Experience' },
     { id: 'education', label: 'Education' },
+    { id: 'blog', label: 'Articles' },
     { id: 'contact', label: 'Contact' }
   ];
   

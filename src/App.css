@@ -71,6 +71,12 @@ canvas {
   border-bottom: none;
 }
 
+#education.content-section {
+  min-height: auto;
+  align-items: flex-start;
+  padding: 6.5rem 2rem 5rem;
+}
+
 .section-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -95,6 +101,16 @@ canvas {
   opacity: 0.9;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.85);
+}
+
+.section-eyebrow {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .services-grid {
@@ -1316,6 +1332,15 @@ canvas {
   margin-bottom: 1rem;
 }
 
+.about-kicker {
+  font-family: 'JetBrains Mono', 'Inter', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
 .about-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -1502,173 +1527,239 @@ canvas {
 }
 
 /* ============================================
-   EDUCATION SECTION
+   EDUCATION & CREDENTIALS
    ============================================ */
 
-.education-grid {
+.credentials-layout {
   display: grid;
-  grid-template-columns: repeat(3, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-  justify-items: center;
-  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  text-align: left;
 }
 
-.education-card {
-  width: min(340px, 100%);
-  aspect-ratio: 1 / 1;
-  padding: 2rem;
-  border-radius: 50%;
-  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.18), transparent 35%),
-              radial-gradient(circle at bottom right, rgba(0, 160, 255, 0.2), transparent 30%),
-              rgba(255, 255, 255, 0.06);
+.credential-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.degree-panel,
+.certs-block,
+.achievements-panel,
+.cert-card {
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-  position: relative;
-  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  align-items: start;
-  justify-items: center;
-  text-align: center;
+  border-radius: 20px;
 }
 
-.education-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15), transparent 55%);
-  pointer-events: none;
+.degree-panel {
+  padding: 2.25rem 2.4rem;
 }
 
-.education-card:hover {
-  transform: translateY(-12px) scale(1.02);
-  border-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 35px 90px rgba(0, 0, 0, 0.32);
+.degree-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-.education-card:nth-child(1) {
-  transform: translateY(12px);
-}
-
-.education-card:nth-child(2) {
-  transform: translateY(-10px);
-}
-
-.education-card:nth-child(3) {
-  transform: translateY(12px);
-}
-
-.education-icon {
-  width: 90px;
-  height: 90px;
-  display: grid;
-  place-items: center;
-  margin-bottom: 1.2rem;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
-  font-size: 2.5rem;
-  box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.15);
-  z-index: 1;
-}
-
-.education-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.6rem;
-  color: white;
+.degree-panel h3 {
+  font-size: 1.7rem;
+  margin-bottom: 0.35rem;
   font-family: 'Space Grotesk', sans-serif;
-  z-index: 1;
+  color: #ffffff;
 }
 
 .education-institution {
   font-size: 1rem;
-  color: #ffffff;
-  font-weight: 700;
-  margin-bottom: 0.25rem;
-  z-index: 1;
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 600;
+  margin-bottom: 0.85rem;
 }
 
 .education-date {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.75);
-  margin-bottom: 1rem;
-  z-index: 1;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-weight: 600;
 }
 
-.education-details,
-.certifications-list,
+.degree-summary {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 1.25rem;
+  max-width: none;
+}
+
+.coursework-chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0 0 1.25rem;
+}
+
+.coursework-chips li {
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.education-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.education-details li {
+  position: relative;
+  padding: 0.4rem 0 0.4rem 1.2rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+.education-details li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.85rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.certs-block {
+  padding: 1.75rem 1.75rem 1.5rem;
+}
+
+.certs-block-header {
+  margin-bottom: 1.25rem;
+}
+
+.certs-block-header h3 {
+  margin-top: 0.4rem;
+  font-size: 1.35rem;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #ffffff;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.cert-card {
+  padding: 1.35rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  min-height: 100%;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.cert-card-id {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.cert-card h4 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.cert-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.72);
+  flex: 1;
+}
+
+.cert-card-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.achievements-panel {
+  padding: 1.75rem 2rem 1.5rem;
+}
+
+.achievements-panel h3 {
+  margin: 0.45rem 0 1.25rem;
+  font-size: 1.35rem;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #ffffff;
+}
+
 .achievements-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  width: 100%;
-  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.5rem;
 }
 
-.education-details li,
-.certifications-list li,
 .achievements-list li {
-  padding: 0.55rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.82);
-  line-height: 1.5;
-  font-size: 0.95rem;
+  padding: 0.9rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
 }
 
-.education-details li:last-child,
-.certifications-list li:last-child,
-.achievements-list li:last-child {
-  border-bottom: none;
-}
-
-.certifications-list li {
-  display: flex;
-  gap: 0.9rem;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.cert-badge {
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 1.1rem;
-  min-width: 1.4rem;
-}
-
-.certifications-list li strong {
+.achievements-list li span {
   display: block;
-  color: white;
-  margin-bottom: 0.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
 }
 
-.certifications-list li p {
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.72);
+.achievements-list li p {
   margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.7);
 }
 
-@media (max-width: 1024px) {
-  .education-grid {
-    grid-template-columns: repeat(2, minmax(260px, 1fr));
-  }
-}
-
-@media (max-width: 740px) {
-  .education-grid {
+@media (max-width: 900px) {
+  .cert-grid,
+  .achievements-list {
     grid-template-columns: 1fr;
   }
 
-  .education-card {
-    width: min(320px, 100%);
-    min-height: auto;
-    border-radius: 40px;
-    padding: 2rem;
+  .degree-panel,
+  .certs-block,
+  .achievements-panel {
+    padding: 1.5rem 1.25rem;
   }
 
-  .education-card::before {
-    display: none;
+  .degree-meta {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 

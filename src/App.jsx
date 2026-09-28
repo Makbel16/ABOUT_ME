@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import SkillsMarquee from './components/SkillsMarquee/SkillsMarquee';
@@ -168,7 +168,6 @@ const ContactForm = () => {
 };
 
 function App() {
-  const [activeFilter, setActiveFilter] = useState('all');
   const latestArticles = [
     {
       title: "Building Scalable React Applications",
@@ -249,26 +248,27 @@ function App() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
+            <p className="section-eyebrow">Profile</p>
             <h2>About Me</h2>
             <p className="about-intro">
-              I'm <strong>Makbel Kebede</strong>, a passionate <strong>Full-Stack Developer</strong> and <strong>Computer Science Expert</strong> dedicated to building innovative, scalable, and user-centric applications. I love turning complex problems into elegant, efficient solutions through clean code and modern technologies.
+              I'm <strong>Makbel Kebede</strong>, a Computer Science student and <strong>full-stack &amp; mobile app developer</strong>. I apply CS fundamentals—data structures, algorithms, and systems thinking—to ship web services, APIs, and mobile clients that stay maintainable under real product constraints.
             </p>
             
             <div className="about-grid">
               <div className="about-card">
-                <div className="about-icon">🎯</div>
-                <h3>My Mission</h3>
-                <p>To create impactful digital solutions that solve real-world problems and enhance user experiences through cutting-edge technology.</p>
+                <div className="about-kicker">01</div>
+                <h3>Computer Science</h3>
+                <p>Coursework in algorithms, databases, networking, and software engineering informs how I model data, reason about complexity, and debug production issues.</p>
               </div>
               <div className="about-card">
-                <div className="about-icon">💡</div>
-                <h3>My Approach</h3>
-                <p>Combining strong computer science fundamentals with modern development practices to build robust, maintainable, and scalable applications.</p>
+                <div className="about-kicker">02</div>
+                <h3>Full-Stack Systems</h3>
+                <p>I design React interfaces, Node/Python APIs, and relational or document stores as one system—auth, validation, and deployment included.</p>
               </div>
               <div className="about-card">
-                <div className="about-icon">🚀</div>
-                <h3>My Goal</h3>
-                <p>To continuously learn, innovate, and contribute to the tech community while delivering exceptional value through software solutions.</p>
+                <div className="about-kicker">03</div>
+                <h3>Mobile Products</h3>
+                <p>I build cross-platform apps with React Native and Flutter: navigation, offline-friendly flows, and API-backed features that feel native.</p>
               </div>
             </div>
 
@@ -302,8 +302,9 @@ function App() {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
+      <p className="section-eyebrow">Selected work</p>
       <h2>Featured Projects</h2>
-      <p>Innovative solutions • Real-world applications • Modern tech stack</p>
+      <p>Web platforms, mobile clients, and applied CS projects from coursework and independent builds.</p>
     </motion.div>
 
     <div className="projects-grid">
@@ -321,7 +322,7 @@ function App() {
             <h3>Task Manager Pro</h3>
             <span>Featured</span>
           </div>
-          <p>Productivity dashboard for team workflows, live syncing, and analytics in a sleek modern UI.</p>
+          <p>Team productivity system with task graphs, live updates, and role-based access across web and API layers.</p>
           <div className="project-card-tech">
             <span>React</span>
             <span>Node.js</span>
@@ -342,9 +343,9 @@ function App() {
         <div className="project-card-body">
           <div className="project-card-header">
             <h3>OSINT Application</h3>
-            <span>Security</span>
+            <span>Applied CS</span>
           </div>
-          <p>Data-gathering toolkit with automated analysis and reporting for intelligence workflows.</p>
+          <p>Intelligence workflow tool: structured data collection, parsing, and report generation with API-backed analysis.</p>
           <div className="project-card-tech">
             <span>Python</span>
             <span>React</span>
@@ -365,9 +366,9 @@ function App() {
         <div className="project-card-body">
           <div className="project-card-header">
             <h3>Car Rental System</h3>
-            <span>Platform</span>
+            <span>Full-stack</span>
           </div>
-          <p>Booking experience with fleet management, payment integration, and an admin dashboard.</p>
+          <p>Reservation flow, fleet inventory, payments, and an admin dashboard with transactional data integrity.</p>
           <div className="project-card-tech">
             <span>Express</span>
             <span>PostgreSQL</span>
@@ -433,14 +434,14 @@ function App() {
         <div className="project-card-accent" />
         <div className="project-card-body">
           <div className="project-card-header">
-            <h3>Portfolio Dashboard</h3>
-            <span>Design</span>
+            <h3>Campus Services App</h3>
+            <span>Mobile</span>
           </div>
-          <p>Modern showcase with interactive sections, performance metrics, and smooth animations.</p>
+          <p>Cross-platform mobile client for service requests, notifications, and authenticated API access on device.</p>
           <div className="project-card-tech">
-            <span>Vite</span>
-            <span>React</span>
-            <span>CSS</span>
+            <span>React Native</span>
+            <span>Expo</span>
+            <span>REST</span>
           </div>
         </div>
       </motion.div>
@@ -453,7 +454,7 @@ function App() {
         <div className="section-container skills-intro">
           <h2>Technical Expertise</h2>
           <p>
-            A curated overview of my core technology stack &amp; professional skills.
+            Languages, mobile clients, backend services, and core computer science I use on real projects.
           </p>
         </div>
         <SkillsMarquee />
@@ -469,29 +470,31 @@ function App() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2>Professional Experience</h2>
-            <p>My journey in software development and technical expertise</p>
+            <p className="section-eyebrow">Career path</p>
+            <h2>Experience</h2>
+            <p>Building production-shaped software while completing a Computer Science degree.</p>
                   
             <div className="timeline">
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
                   <div className="timeline-header">
-                    <h3>Full-Stack Developer</h3>
+                    <h3>Full-Stack &amp; Mobile Developer</h3>
                     <span className="timeline-date">2023 - Present</span>
                   </div>
-                  <h4>Freelance & Personal Projects</h4>
+                  <h4>Independent projects &amp; client work</h4>
                   <ul>
-                    <li>Developed 18+ full-stack applications using React, Node.js, and Python</li>
-                    <li>Built scalable web applications with modern architecture patterns</li>
-                    <li>Implemented RESTful APIs and integrated third-party services</li>
-                    <li>Collaborated with clients to deliver custom software solutions</li>
+                    <li>Delivered 18+ applications spanning web dashboards, REST APIs, and mobile clients</li>
+                    <li>Implemented auth, data modeling, and deployment for student and local-service systems</li>
+                    <li>Shipped React Native / Expo apps that consume the same APIs as the web products</li>
+                    <li>Worked with stakeholders on requirements, iteration, and handoff documentation</li>
                   </ul>
                   <div className="timeline-tech">
                     <span>React</span>
+                    <span>React Native</span>
                     <span>Node.js</span>
                     <span>Python</span>
-                    <span>MongoDB</span>
+                    <span>PostgreSQL</span>
                   </div>
                 </div>
               </div>
@@ -504,12 +507,11 @@ function App() {
                     <h3>Software Developer Intern</h3>
                     <span className="timeline-date">2022 - 2023</span>
                   </div>
-                  <h4>Tech Company</h4>
+                  <h4>Software team</h4>
                   <ul>
-                    <li>Assisted in developing and maintaining web applications</li>
-                    <li>Participated in code reviews and agile development processes</li>
-                    <li>Gained hands-on experience with version control and CI/CD</li>
-                    <li>Contributed to team projects and learned industry best practices</li>
+                    <li>Contributed to web application features, reviews, and bug fixes in an agile cadence</li>
+                    <li>Practiced Git workflows, CI basics, and writing code that other developers could extend</li>
+                    <li>Supported API endpoints and database queries used by internal tools</li>
                   </ul>
                   <div className="timeline-tech">
                     <span>JavaScript</span>
@@ -527,18 +529,18 @@ function App() {
                     <h3>Computer Science Student</h3>
                     <span className="timeline-date">2021 - Present</span>
                   </div>
-                  <h4>University Education</h4>
+                  <h4>Undergraduate program</h4>
                   <ul>
-                    <li>Studying core CS fundamentals: Data Structures, Algorithms, OOP</li>
-                    <li>Completed projects in web development, databases, and software engineering</li>
-                    <li>Active participation in coding competitions and hackathons</li>
-                    <li>Strong foundation in problem-solving and computational thinking</li>
+                    <li>Core CS: data structures, algorithms, object-oriented design, databases, and networking</li>
+                    <li>Course projects covering full-stack systems, mobile interfaces, and software engineering process</li>
+                    <li>Competitions and collaborative builds used to practice complexity analysis and team delivery</li>
                   </ul>
                   <div className="timeline-tech">
                     <span>Java</span>
                     <span>C++</span>
                     <span>Python</span>
                     <span>SQL</span>
+                    <span>DSA</span>
                   </div>
                 </div>
               </div>
@@ -556,58 +558,88 @@ function App() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2>Education & Certifications</h2>
-            <p>Academic background and professional certifications</p>
-                  
-            <div className="education-grid">
-              <div className="education-card">
-                <div className="education-icon">🎓</div>
+            <p className="section-eyebrow">Credentials</p>
+            <h2>Education &amp; Certifications</h2>
+            <p>Degree progress, professional training, and recognition alongside applied software work.</p>
+
+            <div className="credentials-layout">
+              <article className="degree-panel">
+                <div className="degree-meta">
+                  <span className="credential-label">Degree</span>
+                  <span className="education-date">2021 — Present</span>
+                </div>
                 <h3>Bachelor of Science in Computer Science</h3>
-                <p className="education-institution">University Name</p>
-                <p className="education-date">2021 - Present</p>
+                <p className="education-institution">Undergraduate program</p>
+                <p className="degree-summary">
+                  Software engineering and systems coursework with a dual emphasis on full-stack web services and mobile clients. Focus areas include algorithms, data modeling, and building complete applications rather than isolated demos.
+                </p>
+                <ul className="coursework-chips">
+                  <li>Data Structures &amp; Algorithms</li>
+                  <li>Databases</li>
+                  <li>Software Engineering</li>
+                  <li>Computer Networks</li>
+                  <li>Object-Oriented Design</li>
+                  <li>Mobile Application Development</li>
+                </ul>
                 <ul className="education-details">
-                  <li>Focus on Software Engineering & Web Development</li>
-                  <li>Strong foundation in algorithms and data structures</li>
-                  <li>Projects in full-stack development and databases</li>
+                  <li>Capstone-style builds: APIs, web dashboards, and React Native clients</li>
+                  <li>Strong foundation in complexity, debugging, and version-controlled collaboration</li>
                 </ul>
+              </article>
+
+              <div className="certs-block">
+                <div className="certs-block-header">
+                  <span className="credential-label">Professional certifications</span>
+                  <h3>Training that maps to production work</h3>
+                </div>
+                <div className="cert-grid">
+                  <article className="cert-card">
+                    <span className="cert-card-id">01</span>
+                    <h4>Full-Stack Web Development</h4>
+                    <p>End-to-end application design: React interfaces, Node/Python APIs, databases, and deployment.</p>
+                    <span className="cert-card-tag">Bootcamp · Professional</span>
+                  </article>
+                  <article className="cert-card">
+                    <span className="cert-card-id">02</span>
+                    <h4>React Developer</h4>
+                    <p>Component architecture, hooks, and state management for maintainable single-page applications.</p>
+                    <span className="cert-card-tag">Frontend · React</span>
+                  </article>
+                  <article className="cert-card">
+                    <span className="cert-card-id">03</span>
+                    <h4>Python Programming</h4>
+                    <p>Backend services, scripting, and data processing used in APIs and automation around CS coursework.</p>
+                    <span className="cert-card-tag">Backend · Python</span>
+                  </article>
+                  <article className="cert-card">
+                    <span className="cert-card-id">04</span>
+                    <h4>Mobile App Development</h4>
+                    <p>Cross-platform mobile UI, device APIs, and integration with the same backends that power the web apps.</p>
+                    <span className="cert-card-tag">React Native · Flutter</span>
+                  </article>
+                </div>
               </div>
-      
-              <div className="education-card">
-                <div className="education-icon">📜</div>
-                <h3>Professional Certifications</h3>
-                <ul className="certifications-list">
-                  <li>
-                    <span className="cert-badge">✓</span>
-                    <div>
-                      <strong>Full-Stack Web Development</strong>
-                      <p>Completed comprehensive bootcamp</p>
-                    </div>
-                  </li>
-                  <li>
-                    <span className="cert-badge">✓</span>
-                    <div>
-                      <strong>React Developer Certification</strong>
-                      <p>Modern React with Redux</p>
-                    </div>
-                  </li>
-                  <li>
-                    <span className="cert-badge">✓</span>
-                    <div>
-                      <strong>Python Programming</strong>
-                      <p>Advanced Python development</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-      
-              <div className="education-card">
-                <div className="education-icon">🏆</div>
-                <h3>Achievements & Awards</h3>
+
+              <div className="achievements-panel">
+                <span className="credential-label">Recognition</span>
+                <h3>Achievements</h3>
                 <ul className="achievements-list">
-                  <li>🥇 Hackathon Winner - Best Innovation Award</li>
-                  <li>🌟 Dean's List for Academic Excellence</li>
-                  <li>💻 Open Source Contributor - 500+ GitHub contributions</li>
-                  <li>📚 Published technical articles on web development</li>
+                  <li>
+                    <span>Hackathon — Best Innovation</span>
+                    <p>Awarded for a working prototype that combined applied CS with a usable product interface.</p>
+                  </li>
+                  <li>
+                    <span>Dean&apos;s List</span>
+                    <p>Academic standing for consistent performance in the Computer Science curriculum.</p>
+                  </li>
+                  <li>
+                    <span>Open source contributor</span>
+                    <p>500+ GitHub contributions across personal systems, course projects, and public repositories.</p>
+                  </li>
+                  <li>
+                    <span>Technical writing</span>
+                    <p>Notes and articles on web performance, React architecture, and shipping student-built software.</p>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -629,7 +661,7 @@ function App() {
               <span className="articles-badge">Articles</span>
               <h2 className="articles-title">Latest Articles</h2>
               <p className="articles-subtitle">
-                Insights, tutorials, and thoughts on web development, design, and technology
+                Insights on full-stack architecture, mobile clients, and computer science in practice
               </p>
             </header>
 
@@ -663,16 +695,15 @@ function App() {
             viewport={{ once: true }}
           >
             <h2>Get In Touch</h2>
-            <p>Reach out for professional collaboration, project strategy, or technical consulting. I build clean, </p>
-              <p>scalable software for ambitious products and teams.</p>
+            <p>Available for internships, freelance, and collaboration on web platforms and mobile products.</p>
 
             <div className="contact-wrapper">
               <div className="contact-panel">
                 <div className="contact-panel-content">
                   <span className="contact-tag">Work with me</span>
-                  <h3>Let's design your next product together.</h3>
+                  <h3>Web systems and mobile clients, built as one product.</h3>
                   
-                  <p>Whether you’re launching a SaaS platform, modernizing an existing product, or building a new digital experience from scratch, I combine design clarity, backend reliability, and deployment readiness to move your project forward.</p>
+                  <p>I help teams and founders ship full-stack software and mobile apps with clear architecture, CS-grounded implementation, and a path to launch.</p>
 
                   <div className="contact-highlights">
                     <div className="highlight-card">
@@ -718,13 +749,13 @@ function App() {
         <div className="footer-content">
           <div className="footer-section footer-about">
             <h3>Makbel Kebede</h3>
-            <p className="footer-title">Full-Stack Developer & Computer Science Expert</p>
-            <p>Building innovative, scalable, and user-centric applications with modern technologies. Passionate about creating impactful digital solutions.</p>
+            <p className="footer-title">Full-Stack &amp; Mobile Developer · Computer Science Student</p>
+            <p>Building web platforms and mobile applications with a computer science foundation: clean APIs, structured data, and interfaces people can actually use.</p>
             <div className="footer-tech-stack">
               <span>React</span>
+              <span>React Native</span>
               <span>Node.js</span>
               <span>Python</span>
-              <span>TypeScript</span>
             </div>
           </div>
           
@@ -759,7 +790,7 @@ function App() {
                 </svg>
                 GitHub
               </a>
-              <a href="mailto:makbel.kebede@example.com" title="Email">
+              <a href="mailto:makbelkebede35@gmail.com" title="Email">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
                   <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                 </svg>

@@ -17,6 +17,13 @@ const IconFrontend = () => (
   </svg>
 );
 
+const IconMobile = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+    <rect x="7" y="3" width="10" height="18" rx="2" />
+    <path d="M11 18h2" />
+  </svg>
+);
+
 const IconBackend = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
     <path d="M4 7h16v10H4z" />
@@ -57,7 +64,12 @@ export const expertiseCategories = [
   {
     title: 'Frontend',
     icon: IconFrontend,
-    skills: ['React', 'Vue.js', 'Angular', 'HTML5/CSS3', 'Sass', 'Svelte', 'Webpack', 'Vite', 'Tailwind CSS'],
+    skills: ['React', 'Vue.js', 'HTML5/CSS3', 'Sass', 'Vite', 'Tailwind CSS'],
+  },
+  {
+    title: 'Mobile',
+    icon: IconMobile,
+    skills: ['React Native', 'Expo', 'Flutter', 'Android', 'REST APIs', 'Push Notifications'],
   },
   {
     title: 'Backend',
